@@ -2,6 +2,6 @@ package jhfkfk;
 
 public class hlo4 {
     public static void main(String[] args) {
-        System.out.println("He!!0");
+        System.out.println("HeLL0");
     }
 }
