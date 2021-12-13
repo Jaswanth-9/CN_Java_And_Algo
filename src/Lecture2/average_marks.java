@@ -35,7 +35,7 @@ public class average_marks {
         a2 = s.nextInt();
         a3 = s.nextInt();
         System.out.println(c1);
-        int avg = (a1+a2+a3)/3;
-        System.out.println(avg);
+      //  int avg = (a1+a2+a3)/3;
+        System.out.println((a1+a2+a3)/3);
     }
 }
