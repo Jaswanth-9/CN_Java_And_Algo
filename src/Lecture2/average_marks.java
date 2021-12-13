@@ -1,6 +1,4 @@
 package Lecture2;
-
-public class average_marks {
     /*
     Write a program to input a name(as a single character) and marks of three tests as m1, m2, and m3 of a student considering all the three marks have been given in integer format.
 Now, you need to calculate the average of the given marks and print it along with the name as mentioned in the output format section.
@@ -26,4 +24,18 @@ Sample Output 2 :
 T
 6
      */
+
+import java.util.Scanner;
+public class average_marks {
+    public static void main(String[] args) {
+        String c1; int a1, a2, a3;
+        Scanner s = new Scanner(System.in);
+        c1 = s.nextLine();
+        a1 = s.nextInt();
+        a2 = s.nextInt();
+        a3 = s.nextInt();
+        System.out.println(c1);
+        int avg = (a1+a2+a3)/3;
+        System.out.println(avg);
+    }
 }
