@@ -35,5 +35,27 @@ pf = 11% of Rs. 4567 = Rs. 502.37
 Since, the grade is 'B', we take allowance as Rs. 1500.
 On substituting these values to the formula of totalSalary, we get Rs. 8761.53 and now rounding it off will result in Rs. 8762 and hence the Answer.
  */
+import java.util.Scanner;
 public class assign_total_salary {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int basic = s.nextInt();
+        String a = s.nextLine();
+        int allow = 0;
+        String A = "A";
+        String B = "B";
+        String C = "C";
+        if( a == A) allow = 17000;
+        else if ( a == B) allow = 15000;
+        else if ( a == C) allow = 13000;
+        else System.out.println("Enter valid grade");
+        int hra = (20/100)*basic;
+        int da = (50/100)*basic;
+        int pf = (11/100)*basic;
+        if(basic >=0 && basic <= 7500000) {
+            int salary = (basic + hra + da + allow) - pf;
+            System.out.println(salary);
+        }
+        else System.out.println("Enter basic between 0 and 7500000");
+    }
 }
