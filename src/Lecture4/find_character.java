@@ -27,8 +27,6 @@ Sample Output 3 :
  */
 import java.util.Scanner;
 public class find_character {
-    private int a;
-    private char c;
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         char s1 = s.next().charAt(0);
