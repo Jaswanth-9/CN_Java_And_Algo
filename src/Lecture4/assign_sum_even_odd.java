@@ -22,5 +22,26 @@ Sample Output 2:
 Explanation for Input 2:
 For the given input, the even digits are 2, 2 and 4 and if we take the sum of these digits it will come out to be 8(2 + 2 + 4) and similarly, if we look at the odd digits, they are, 5, 5 and 5 which makes a sum of 15(5 + 5 + 5). Hence the answer would be, 8(evenSum) <single space> 15(oddSum)
  */
+import java.lang.*;
+import java.util.Scanner;
 public class assign_sum_even_odd {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        Long s2 = s.nextLong();
+        int rem = 0;
+        int even = 0;
+        int odd = 0;
+        int s1 = 1;
+        if(s2>=0 && s2<=100000000){
+            s1 = s2.intValue();
+            while(s1 != 0){
+                rem = s1%10;
+                s1 = s1/10;
+                if(rem%2 == 0) even = even + rem;
+                else odd = odd + rem;
+            }
+            System.out.println(even+" "+odd);
+        }
+        else System.exit(0);
+    }
 }

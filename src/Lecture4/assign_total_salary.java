@@ -57,7 +57,7 @@ public class assign_total_salary {
             double hra = (20.0/100)*(basic);
             double da = (50.0/100)*basic;
             double pf = (11.0/100)*basic;
-            double salary = (basic + hra + da + allow) - pf;
+            double salary =(basic + hra + da + allow) - pf;
             System.out.println(Math.round(salary));
         }
         else System.out.println("Enter basic between 0 and 7500000");
