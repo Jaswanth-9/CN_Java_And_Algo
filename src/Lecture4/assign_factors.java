@@ -21,5 +21,17 @@ Sample Output 2 :
 Explanation of Sample Output 2 :
 No output as 11 is prime having factors as 1 and 11 only
  */
+import java.util.Scanner;
 public class assign_factors {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int s1 = s.nextInt();
+        if(s1>=0 && s1<=10000) {
+        for(int i =2; i<=(s1/2); i++){
+                int r = s1%i;
+                if(r == 0) System.out.print(i+" ");
+            }
+        }
+        else System.out.println("Enter value between 0 and 10000");
+    }
 }

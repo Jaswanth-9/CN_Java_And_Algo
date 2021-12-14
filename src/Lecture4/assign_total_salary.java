@@ -36,12 +36,13 @@ Since, the grade is 'B', we take allowance as Rs. 1500.
 On substituting these values to the formula of totalSalary, we get Rs. 8761.53 and now rounding it off will result in Rs. 8762 and hence the Answer.
  */
 import java.util.Scanner;
+import java.lang.*;
 public class assign_total_salary {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
-        int basic = s.nextInt();
+        double basic = s.nextInt();
         char a = s.next().charAt(0);
-        int allow = 0;
+        double allow = 0;
 //        String A = 'A';
 //        String B = "B";
 //        String C = "C";
@@ -57,7 +58,7 @@ public class assign_total_salary {
             double da = (50.0/100)*basic;
             double pf = (11.0/100)*basic;
             double salary = (basic + hra + da + allow) - pf;
-            System.out.println(salary);
+            System.out.println(Math.round(salary));
         }
         else System.out.println("Enter basic between 0 and 7500000");
     }
