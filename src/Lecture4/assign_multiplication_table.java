@@ -36,5 +36,17 @@ Sample Output 2 :
 45
 50
  */
+import java.util.Scanner;
 public class assign_multiplication_table {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int i = 1;
+        if(n>=0 && n<= 10000) {
+            while (i < 11) {
+                System.out.println(n * i);
+                i++;
+            }
+        }
+    }
 }
