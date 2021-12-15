@@ -1,4 +1,7 @@
 package Lecture5;
+
+import java.util.Scanner;
+
 /*
 Code : Character Pattern
 Send Feedback
@@ -33,4 +36,22 @@ EFGHI
 FGHIJK
  */
 public class character_pattern {
+    public static void main(String[] args) {
+        int n;
+        Scanner s = new Scanner(System.in);
+        n = s.nextInt();
+        if (n <= 26 && n >= 1) {
+            for (int i=0; i<n; i++) {
+                int k = 0;
+                for (int j=65;j<(65+i+1);j++)
+                {
+                    int c = 65 +i+ k;
+                    char ch = (char) c;
+                    System.out.print(ch);
+                    k++;
+                }
+                System.out.println();
+            }
+        }
+    }
 }
