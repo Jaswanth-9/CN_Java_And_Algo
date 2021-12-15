@@ -33,5 +33,22 @@ DDDD
 EEEEE
 FFFFFF
  */
+import java.util.Scanner;
 public class alpha_pattern {
+    public static void main(String[] args) {
+        int n;
+        String c;
+        Scanner s = new Scanner(System.in);
+        n = s.nextInt();
+        if (n <= 26 && n >= 1) {
+            for (int i = 1; i <= n; i++) {
+                for (int j=65;j<(65+n);j++)
+                {
+                    char ch  = (char) j;
+                    System.out.print(ch);
+                }
+                System.out.println();
+            }
+        }
+    }
 }
