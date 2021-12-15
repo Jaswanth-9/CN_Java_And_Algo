@@ -1,4 +1,7 @@
 package Lecture5;
+
+import java.util.Scanner;
+
 /*
 Code : Interesting Alphabets
 Send Feedback
@@ -38,4 +41,17 @@ BCDEFG
 ABCDEFG
  */
 public class interesting_alphabets {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        for( int i = 0; i<=n;i++){
+            for(int j=0; j<i;j++){
+                int m = n-i+j;
+                int c = 65+m;
+                char ch = (char) c;
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
 }
