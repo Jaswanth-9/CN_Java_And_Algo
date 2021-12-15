@@ -32,5 +32,17 @@ Sample Output 2:
 54321
 654321
  */
+import java.util.Scanner;
 public class reverse_number_pattern {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        for(int i = 0; i<n;i++){
+            for ( int j =0;j<=i;j++){
+                int c = 1+i-j;
+                System.out.print(c);
+            }
+            System.out.println();
+        }
+    }
 }
