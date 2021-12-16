@@ -29,5 +29,20 @@ Sample Output 2:
  123
 1234
  */
+import java.util.Scanner;
 public class mirror_image {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=n-i;j>0;j--){
+                System.out.print(" ");
+            }
+            for(int k=1;k<=i;k++){
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+    }
 }
