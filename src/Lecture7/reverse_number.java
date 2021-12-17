@@ -20,5 +20,17 @@ Sample Input 2 :
 Sample Output 2 :
 891
  */
+import java.util.Scanner;
 public class reverse_number {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int j=0;
+        while(n>0){
+           int r = n%10;
+           j = j*10 + r;
+           n=n/10;
+        }
+        System.out.println(j);
+    }
 }
