@@ -25,7 +25,7 @@ public class ap_series {
         int n = s.nextInt();
         for (int i = 0; i <= (3 * n) + 1; i++) {
             if(i%4==0){
-                System.out.println(5);
+                System.out.println(6);
             }
         }
     }
