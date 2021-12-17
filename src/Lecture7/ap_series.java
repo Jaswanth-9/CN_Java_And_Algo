@@ -18,5 +18,15 @@ Sample Input 2 :
 Sample Output 2 :
 5 11 14 17
  */
+import java.util.Scanner;
 public class ap_series {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+     //   int n = s.nextInt();
+        for (int i = 0; i <= (3 * n) + 1; i++) {
+            if(i%4==0){
+                System.out.println(i);
+            }
+        }
+    }
 }

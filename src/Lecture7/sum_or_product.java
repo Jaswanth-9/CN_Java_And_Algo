@@ -30,5 +30,30 @@ Sample Input 3 :
 Sample Output 3 :
 -1
  */
+import java.util.Scanner;
 public class sum_or_product {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int m =0;
+        int l =1;
+        int c = s.nextInt();
+        switch(c){
+            case 1 :
+                for(int i=1;i<=n;i++){
+                    m += i;
+                }
+                System.out.println(m);
+            case 2 :
+                for(int i=1;i<=n;i++){
+                    l *= i;
+                }
+                System.out.println(l);
+            default :
+                System.out.println("Enter valid option");
+        }
+
+    }
 }
+
+
