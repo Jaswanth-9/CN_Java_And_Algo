@@ -22,11 +22,20 @@ import java.util.Scanner;
 public class ap_series {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        for (int i = 0; i <= (3 * n) + 1; i++) {
-            if(i%4==0){
-                System.out.println(i);
+        int x = s.nextInt();
+        int n = 1;
+        int a = 0;
+        while(n>0){
+            while(a < x){
+                int l = (3*n)+2;
+                if(l%4 != 0)
+                {
+                    System.out.print(l+" ");
+                    a++;
+                }
+                n++;
             }
+            System.exit(-1);
         }
     }
 }
