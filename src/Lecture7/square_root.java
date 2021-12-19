@@ -26,7 +26,7 @@ public class square_root {
         int n = s.nextInt();
         for(int i =1;i<(n/2);i++){
             if((i*i)>n){
-                System.out.println((i-1)*(i-1));
+                System.out.println((i-1));
                 System.exit(-1);
             }
         }
