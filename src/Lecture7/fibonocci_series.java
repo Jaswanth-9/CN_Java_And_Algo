@@ -26,5 +26,6 @@ So by using the property of the Fibonacci series i.e
 [ 1, 1, 2, 3, 5, 8]
 So the “6th” element is “8” hence we get the output.
  */
+import java.util.Scanner;
 public class fibonocci_series {
 }
