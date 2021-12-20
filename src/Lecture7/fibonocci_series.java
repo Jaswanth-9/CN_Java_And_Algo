@@ -33,13 +33,11 @@ public class fibonocci_series{
         int s1 = s.nextInt();
         recursion(s1);
     }
-    public static long recursion(int i){
-        if(i==0) return 0;
-        else if(i==1) return 1;
-        else if(i==2) return 1;
-        else if (i>=3){
-            long f = recursion(i - 1) + recursion(i - 2);
-            return f;
+    public static long recursion(int a){
+        if(a==0) return 0;
+        else if(a<=2) return 1;
+        else if (a>=3){
+            return recursion(a - 1) + recursion(a - 2);
         }
         else return 0;
     }
