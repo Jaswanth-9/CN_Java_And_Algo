@@ -33,7 +33,7 @@ public class decimal_to_binary {
     while(t>0) {
         int r = t%2;
         t /= 2;
-        a = a + r;
+        a = r + a;
         }
     System.out.println(a);
     }
