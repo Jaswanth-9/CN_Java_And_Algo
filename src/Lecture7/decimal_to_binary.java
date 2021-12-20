@@ -23,5 +23,18 @@ Sample Input 2 :
 Sample Output 2 :
 111
  */
+import java.util.Scanner;
 public class decimal_to_binary {
+    public static void main(String[] args){
+    Scanner s = new Scanner(System.in);
+    int s1 = s.nextInt();
+    String a = " ";
+    int t = s1;
+    while(t>0) {
+        int r = t%2;
+        t /= 2;
+        a = a + r;
+        }
+    System.out.println(a);
+    }
 }
