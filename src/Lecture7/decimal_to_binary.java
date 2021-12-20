@@ -31,7 +31,7 @@ public class decimal_to_binary {
     String a = " ";
     int t = s1;
     while(t>0) {
-        int r = t%3;
+        int r = t%2;
         t /= 2;
         a = r + a;
         }
