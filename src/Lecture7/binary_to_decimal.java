@@ -18,5 +18,20 @@ Sample Input 2 :
 Sample Output 2 :
 7
  */
+import java.util.Scanner;
+import java.lang.Math;
 public class binary_to_decimal {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int s1 = s.nextInt();
+        int a = s1;
+        int v = 0;
+        int p =0;
+        while(a>0){
+            int r = a%10;
+            a = a/10;
+            v = v + r * (int)(Math.pow(2,p++));
+        }
+        System.out.println(v);
+    }
 }
