@@ -27,5 +27,19 @@ So by using the property of the Fibonacci series i.e
 So the “6th” element is “8” hence we get the output.
  */
 import java.util.Scanner;
-public class fibonocci_series {
+public class fibonocci_series{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int s1 = s.nextInt();
+        recursion(s1);
+    }
+    public static long recursion(int i){
+        if(i==0) return 0;
+        if(i==1) return 1;
+        if(i==2) return 1;
+        else {
+            long f = recursion(i - 1) + recursion(i - 2);
+            return f;
+        }
+    }
 }
