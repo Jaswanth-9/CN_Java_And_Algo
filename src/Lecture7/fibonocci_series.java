@@ -35,11 +35,12 @@ public class fibonocci_series{
     }
     public static long recursion(int i){
         if(i==0) return 0;
-        if(i==1) return 1;
-        if(i==2) return 1;
-        else {
+        else if(i==1) return 1;
+        else if(i==2) return 1;
+        else if (i>=3){
             long f = recursion(i - 1) + recursion(i - 2);
             return f;
         }
+        else return 0;
     }
 }
