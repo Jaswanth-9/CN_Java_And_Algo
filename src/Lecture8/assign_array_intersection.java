@@ -51,5 +51,39 @@ Sample Output 2 :
 Explanation for Sample Output 2 :
 Since, both input arrays have two '2's, the intersection of the arrays also have two '2's. The first '2' of first array matches with the first '2' of the second array. Similarly, the second '2' of the first array matches with the second '2' if the second array.
  */
+import java.util.Scanner;
+import java.util.ArrayList;
 public class assign_array_intersection {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        ArrayList<Integer> a1 = new ArrayList<>();
+        ArrayList<Integer> a2 = new ArrayList<>();
+        ArrayList<Integer> a3 = new ArrayList<>();
+        for(int i=1; i<=t; i++){
+            int n1 = s.nextInt();
+            for(int j=0; j<n1; j++){
+                int v = s.nextInt();
+                a1.add(j);
+            }
+            int n2 = s.nextInt();
+            for(int k=0; k<n2; k++){
+                int w = s.nextInt();
+                a2.add(k);
+            }
+            for(int x=0; x<a1.size(); x++){
+                for(int y=0; y<a2.size(); y++){
+                    if(a1.get(x) == a2.get(y)){
+                        int c = 0;
+                        a3.add(c);
+                        a2.remove(y);
+                        c++;
+                    }
+                }
+            }
+            for(int g=0; g<a3.size(); g++){
+                System.out.print(a3.get(g)+" ");
+            }
+        }
+    }
 }
