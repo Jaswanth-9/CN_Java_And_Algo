@@ -42,16 +42,17 @@ public class array_sum {
     int s1 = s.nextInt();
     ArrayList<Integer> arr = new ArrayList<>();
     for( int i=1; i<=s1; i++){
-        int l = 0;
         int s2 = s.nextInt();
         for(int j=1; j<=s2; j++){
             int m = s.nextInt();
             arr.add(m);
         }
+        int l = 0;
         for( int d=0; d<arr.size(); d++){
             l = l + arr.get(d);
         }
         System.out.println(l);
+        arr.clear();
         }
     }
 }
