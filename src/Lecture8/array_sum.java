@@ -48,7 +48,7 @@ public class array_sum {
             int m = s.nextInt();
             arr.add(m);
         }
-        for( int d=0; d<=arr.size(); d++){
+        for( int d=0; d<arr.size(); d++){
             l = l + arr.get(d);
         }
         System.out.println(l);
