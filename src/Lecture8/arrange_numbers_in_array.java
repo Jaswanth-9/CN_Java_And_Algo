@@ -32,5 +32,41 @@ Sample Output 2 :
 1 3 5 7 9 8 6 4 2
 1 3 2
  */
+import java.util.Scanner;
+import java.util.ArrayList;
 public class arrange_numbers_in_array {
-}
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        ArrayList<Integer> arr = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i=1; i<=t; i++) {
+            int n = s.nextInt();
+            list.add(n);
+        }
+            for(int j=0; j<list.size(); j++){
+                int m = list.get(j);
+                if(m%2==0){
+                    for(int l=1; l<m; l=l+2){
+                        arr.add(l);
+                    }
+                    for(int k=m; k>0; k=k-2){
+                        arr.add(k);
+                    }
+                }
+                else{
+                    for(int b=1; b<=m; b=b+2){
+                        arr.add(b);
+                    }
+                    for(int c=m-1; c>0; c=c-2){
+                        arr.add(c);
+                    }
+                }
+                for(int a=0; a<arr.size(); a++){
+                    System.out.print(arr.get(a)+" ");
+                }
+                System.out.println();
+                arr.clear();
+            }
+        }
+    }
