@@ -85,6 +85,7 @@ public class assign_array_intersection {
         }
         for(int g=0; g<a4.size(); g++){
             System.out.print(a4.get(g)+" ");
+            System.out.println();
         }
     }
 }
