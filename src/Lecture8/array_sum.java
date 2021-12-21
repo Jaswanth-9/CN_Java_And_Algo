@@ -40,9 +40,9 @@ public class array_sum {
     public static void main(String[] args){
     Scanner s = new Scanner(System.in);
     int s1 = s.nextInt();
-    int l = 0;
     ArrayList<Integer> arr = new ArrayList<>();
     for( int i=1; i<=s1; i++){
+        int l = 0;
         int s2 = s.nextInt();
         for(int j=1; j<=s2; j++){
             int m = s.nextInt();
