@@ -60,6 +60,7 @@ public class assign_array_intersection {
         ArrayList<Integer> a1 = new ArrayList<>();
         ArrayList<Integer> a2 = new ArrayList<>();
         ArrayList<Integer> a3 = new ArrayList<>();
+        int c = 0;
         for(int i=1; i<=t; i++){
             int n1 = s.nextInt();
             for(int j=0; j<n1; j++){
@@ -74,7 +75,6 @@ public class assign_array_intersection {
             for(int x=0; x<a1.size(); x++){
                 for(int y=0; y<a2.size(); y++){
                     if(a1.get(x) == a2.get(y)){
-                        int c = 0;
                         a3.add(c);
                         a2.remove(y);
                         c++;
