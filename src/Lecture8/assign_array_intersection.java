@@ -74,15 +74,15 @@ public class assign_array_intersection {
             for(int x=0; x<a1.size(); x++){
                 for(int y=0; y<a2.size(); y++){
                     if(a1.get(x) == a2.get(y)){
-                       // a3.add(a2.get(y));
-                        System.out.print(a2.get(y)+" ");
+                        a3.add(a2.get(y));
+                      //  System.out.print(a2.get(y)+" ");
                         a2.remove(y);
                     }
                 }
             }
-//            for(int g=0; g<a3.size(); g++){
-//                System.out.print(a3.get(g)+" ");
-//            }
+            for(int g=0; g<a3.size(); g++){
+                System.out.print(a3.get(g)+" ");
+            }
         }
     }
 }
