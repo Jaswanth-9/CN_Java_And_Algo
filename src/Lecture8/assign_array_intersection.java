@@ -60,6 +60,7 @@ public class assign_array_intersection {
         ArrayList<Integer> a1 = new ArrayList<>();
         ArrayList<Integer> a2 = new ArrayList<>();
         ArrayList<Integer> a3 = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> a4 = new ArrayList<>();
         for(int i=1; i<=t; i++){
             int n1 = s.nextInt();
             for(int j=0; j<n1; j++){
@@ -80,9 +81,10 @@ public class assign_array_intersection {
                     }
                 }
             }
-            for(int g=0; g<a3.size(); g++){
-                System.out.print(a3.get(g)+" ");
-            }
+            a4.add(a3);
+        }
+        for(int g=0; g<a4.size(); g++){
+            System.out.print(a4.get(g)+" ");
         }
     }
 }
