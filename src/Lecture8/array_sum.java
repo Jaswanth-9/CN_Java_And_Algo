@@ -41,6 +41,7 @@ public class array_sum {
     Scanner s = new Scanner(System.in);
     int s1 = s.nextInt();
     ArrayList<Integer> arr = new ArrayList<>();
+    ArrayList<Integer> sum = new ArrayList<>();
     for( int i=1; i<=s1; i++){
         int s2 = s.nextInt();
         for(int j=1; j<=s2; j++){
@@ -51,8 +52,11 @@ public class array_sum {
         for( int d=0; d<arr.size(); d++){
             l = l + arr.get(d);
         }
-        System.out.println(l);
+        sum.add(l);
         arr.clear();
         }
+    for(int f=0; f<sum.size(); f++){
+        System.out.println(sum.get(f)+" ");
+    }
     }
 }
