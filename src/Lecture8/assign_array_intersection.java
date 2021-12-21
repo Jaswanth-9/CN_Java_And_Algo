@@ -64,24 +64,25 @@ public class assign_array_intersection {
             int n1 = s.nextInt();
             for(int j=0; j<n1; j++){
                 int v = s.nextInt();
-                a1.add(j);
+                a1.add(v);
             }
             int n2 = s.nextInt();
             for(int k=0; k<n2; k++){
                 int w = s.nextInt();
-                a2.add(k);
+                a2.add(w);
             }
             for(int x=0; x<a1.size(); x++){
                 for(int y=0; y<a2.size(); y++){
                     if(a1.get(x) == a2.get(y)){
-                        a3.add(a2.get(y));
+                       // a3.add(a2.get(y));
+                        System.out.print(a2.get(y)+" ");
                         a2.remove(y);
                     }
                 }
             }
-            for(int g=0; g<a3.size(); g++){
-                System.out.print(a3.get(g)+" ");
-            }
+//            for(int g=0; g<a3.size(); g++){
+//                System.out.print(a3.get(g)+" ");
+//            }
         }
     }
 }
