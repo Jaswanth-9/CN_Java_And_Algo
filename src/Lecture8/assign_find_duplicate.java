@@ -1,4 +1,8 @@
 package Lecture8;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /*
 Find Duplicate
 Send Feedback
@@ -35,5 +39,30 @@ Sample Output 2:
 1
 3
  */
+import java.util.Scanner;
+import java.util.ArrayList;
 public class assign_find_duplicate {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        ArrayList<Integer> a1 = new ArrayList<>();
+        ArrayList<Integer> a2 = new ArrayList<>();
+        ArrayList<Integer> a3 = new ArrayList<>();
+        for(int i=1; i<=t; i++){
+            int n1 = s.nextInt();
+            for(int j=0; j<n1; j++){
+                int v = s.nextInt();
+                a1.add(v);
+            }
+          a2 = a1;
+            for(int x=0; x<a1.size(); x++){
+                for(int y=x+1; y<a2.size(); y++){
+                    if(a1.get(x) == a2.get(y)){
+                        a3.add(a2.get(y));
+                        System.out.print(a2.get(y)+" ");
+                    }
+                }
+            }
+        }
+    }
 }

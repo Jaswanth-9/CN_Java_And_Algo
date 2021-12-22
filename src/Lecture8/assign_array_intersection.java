@@ -52,40 +52,41 @@ Explanation for Sample Output 2 :
 Since, both input arrays have two '2's, the intersection of the arrays also have two '2's. The first '2' of first array matches with the first '2' of the second array. Similarly, the second '2' of the first array matches with the second '2' if the second array.
  */
 import java.util.Scanner;
-import java.util.ArrayList;
 public class assign_array_intersection {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         int t = s.nextInt();
-        ArrayList<Integer> a1 = new ArrayList<>();
-        ArrayList<Integer> a2 = new ArrayList<>();
-        ArrayList<Integer> a3 = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> a4 = new ArrayList<>();
-        for(int i=1; i<=t; i++){
-            int n1 = s.nextInt();
-            for(int j=0; j<n1; j++){
-                int v = s.nextInt();
-                a1.add(v);
+        int[][] time = new int[t-1][];
+        for(int i=0; i<t; i++){
+            int s1 = s.nextInt();
+            int[] arr1 = new int[s1];
+            for(int j=0; j<s1; j++){
+                int s2 = s.nextInt();
+                arr1[j] = s2;
             }
-            int n2 = s.nextInt();
-            for(int k=0; k<n2; k++){
-                int w = s.nextInt();
-                a2.add(w);
+            int s3 = s.nextInt();
+            int[] arr2 = new int[s3];
+            for(int k=0; k<s3; k++){
+                int s4 = s.nextInt();
+                arr2[k] = s4;
             }
-            for(int x=0; x<a1.size(); x++){
-                for(int y=0; y<a2.size(); y++){
-                    if(a1.get(x) == a2.get(y)){
-                        a3.add(a2.get(y));
-                      //  System.out.print(a2.get(y)+" ");
-                        a2.remove(y);
+            for(int l=0; l<arr1.length; l++){
+                for(int m=0; m<arr2.length; m++){
+                    if(arr1[l] == arr2[m]){
+                        int c = 0;
+                        time[i][c] = arr2[m];
+                        for(int z=m;z<arr2.length; z++){
+                            arr2[m] = arr2[m+1];
+                        }
+                        c++;
                     }
                 }
             }
-            a4.add(a3);
-            a3.clear();
         }
-        for(int g=0; g<a4.size(); g++){
-            System.out.print(a4.get(g)+" ");
+        for(int h=0; h<t; h++){
+            for(int sf=0; sf<=time[h].length; sf++){
+                System.out.print(time[h][sf]+" ");
+            }
             System.out.println();
         }
     }
