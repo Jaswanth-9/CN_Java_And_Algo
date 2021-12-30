@@ -70,16 +70,17 @@ public class assign_array_intersection {
                 int s4 = s.nextInt();
                 arr2[k] = s4;
             }
-            for(int l=0; l<arr1.length; l++){
-                for(int m=0; m<arr2.length; m++){
+            int c = 0;
+            for(int l=0; l<s1; l++){
+                for(int m=0; m<s3; m++){
                     if(arr1[l] == arr2[m]){
-                        int c = 0;
                         time[i][c] = arr2[m];
-                        for(int z=m;z<arr2.length; z++){
-                            arr2[m] = arr2[m+1];
+                        for(int z=m;z<s3; z++){
+                            arr2[z] = arr2[z+1];
                         }
                         c++;
                     }
+                    m--;
                 }
             }
         }

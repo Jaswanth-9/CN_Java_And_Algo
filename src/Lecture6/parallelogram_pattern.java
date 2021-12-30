@@ -37,7 +37,7 @@ public class parallelogram_pattern {
             for(int j=2;j<=i;j++){
                 System.out.print(" ");
             }
-            for(int k=1;k<=(n-2);k++){
+            for(int k=1;k<=n;k++){
                 System.out.print("*");
             }
             System.out.println();

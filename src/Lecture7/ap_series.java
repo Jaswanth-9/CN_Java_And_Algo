@@ -23,17 +23,17 @@ public class ap_series {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int x = s.nextInt();
-        int n = 1;
+        int N = 1;
         int a = 0;
-        while(n>0){
+        while(N>0){
             while(a < x){
-                int l = (3*n)+2;
+                int l = (3*N)+2;
                 if(l%4 != 0)
                 {
                     System.out.print(l+" ");
                     a++;
                 }
-                n++;
+                N++;
             }
             System.exit(-1);
         }

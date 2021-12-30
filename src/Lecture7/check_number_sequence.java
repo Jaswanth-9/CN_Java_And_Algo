@@ -57,5 +57,40 @@ The series is :
 8 7 6 5 8 2
 It is strictly decreasing first (8 7 6 5). Then it's strictly increasing (5 8). But then it starts strictly decreasing again (8 2). Therefore, the output for this test case is 'false
  */
+import java.util.Scanner;
 public class check_number_sequence {
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n =s.nextInt();
+        int pre = s.nextInt();
+        boolean dec = true;
+        int i,count=0;
+        int cur;
+        for (i=2;i<=n;i++){
+            cur=s.nextInt();
+            if (pre==cur){
+                System.out.println("false");
+                return;
+            }else if (pre<cur){
+                if (dec){
+                    count++;
+                    dec=false;
+                }
+            }
+            else {
+                if (pre>cur){
+                    if (!dec){
+                        System.out.println("false");
+                        return;
+                    }
+                }
+            }
+            pre=cur;
+        }
+        if (count==1&&dec==false||count==0&&dec==true||count==0&&dec==false){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+    }
 }
