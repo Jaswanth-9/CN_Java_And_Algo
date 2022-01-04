@@ -40,7 +40,8 @@ public class return_arr_sum {
         int t = s.nextInt();
         if (t >= 1 && t <= (int) Math.pow(10, 2)) {
             for (int i = 0; i < t; i++) {
-                input_arr();
+               int m = input_arr();
+                System.out.println(m);
             }
         }
     }
